@@ -1,0 +1,247 @@
+:root {
+  --space-m: 12px;
+  --space-xm: 16px;
+  --space-l: 24px;
+  --space-b: 36px;
+
+  --size-s: 14px;
+  --size-d: 16px;
+  --size-l: 20px;
+
+  --color-border: #dee2e6;
+  --color-primary: rgb(13, 110, 253);
+  --color-secondary: #6c757d;
+  --color-white: #ffffff;
+  --color-title: #212529;
+  --color-text: #343a40;
+
+  --border-radius: 12px;
+
+  --weight-title: 500;
+  --weight-text: 400;
+
+  --height-title: 120%;
+  --height-text: 170%;
+}
+
+/* =================== */
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.page {
+  background: var(--color-white);
+  padding: 0 15px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.page_content {
+  max-width: 960px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 80px;
+}
+/* =================== */
+
+.header {
+  padding: var(--space-l) 0;
+  border-bottom: 1px solid var(--color-border);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 17px;
+
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  width: 24px;
+  height: 24px;
+
+  border-radius: calc(var(--border-radius) / 2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav_inline {
+  gap: var(--space-l);
+}
+
+.nav_vertical {
+  gap: var(--space-xm);
+  flex-direction: column;
+}
+
+.nav_link {
+  color: var(--color-text);
+  font-size: var(--size-d);
+  text-decoration: none;
+
+  line-height: 100%;
+}
+
+.nav_link:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+.footer {
+  padding: var(--space-l) 0;
+  border-top: 1px solid var(--color-border);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_copyright {
+  font-size: var(--size-s);
+  color: var(--color-text);
+  display: block;
+  margin-top: var(--space-l);
+}
+
+.footer_title {
+  font-size: var(--size-l);
+  color: var(--color-title);
+  display: block;
+  margin-bottom: var(--space-l);
+  font-weight: var(--weight-title);
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  align-items: center;
+}
+
+.main_image {
+  width: 500px;
+  height: 500px;
+  border-radius: var(--border-radius);
+}
+
+.main_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
+.main_title {
+  font-size: 36px;
+  color: var(--color-title);
+  font-weight: var(--weight-title);
+  line-height: var(--height-title);
+}
+
+.main_text {
+  font-size: var(--size-d);
+  color: var(--color-text);
+  font-weight: var(--weight-text);
+  line-height: var(--height-text);
+}
+
+.button {
+  display: inline-block;
+  font-size: var(--size-d);
+  text-decoration: none;
+  padding: var(--space-m) var(--space-xm);
+  border-radius: var(--border-radius);
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.main_button {
+  color: var(--color-white);
+
+  background-color: var(--color-secondary);
+}
+
+.featured {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: var(--space-b);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.featured_card {
+  width: calc(100% / 3);
+  padding: 0 var(--space-l);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-d);
+}
+
+.card_image {
+  height: 64px;
+  width: 64px;
+  border-radius: var(--border-radius);
+}
+
+.card_title {
+  font-size: 32px;
+  font-weight: var(--weight-title);
+  color: var(--color-title);
+}
+
+.card_text {
+  font-weight: --weight-text;
+  font-size: var(--size-d);
+  color: var(--color-text);
+  line-height: var(--height-text);
+}
+
+.card_link {
+  color: var(--color-primary);
+  font-size: var(--size-d);
+  font-weight: --weight-text;
+}
+
+.card_link:hover {
+  text-decoration: none;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-primary);
+  padding: var(--space-l);
+  color: var(--color-white);
+  gap: var(--space-xm);
+  border-radius: var(--border-radius);
+}
+
+.actions_content {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.actions_title {
+  font-size: 24px;
+  font-weight: var(--weight-text);
+}
+
+.actions_button {
+  color: var(--color-title);
+  text-align: center;
+  background-color: var(--color-white);
+}
