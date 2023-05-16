@@ -1,0 +1,92 @@
+<header class='header'>
+  {{#with header}}
+    <div class='header_top'>
+      <div class='logo'>
+        <span class='logo_text'>{{brandName}}</span>
+      </div>
+
+      <nav class='header_nav'>
+        <div class='nav nav_inline'>
+          {{#each links}}
+            <a href='{{url}}' class='nav_link'>{{text}}</a>
+          {{/each}}
+        </div>
+      </nav>
+    </div>
+
+    <div class='header_bottom'>
+      <div class='ad'>
+        <div class='ad_logo'>Ad</div>
+        <div>
+          <span class='ad_text'>{{ad.text}}:</span>
+          <a href='{{ad.url}}' class='ad_url'>{{ad.url}}</a>
+        </div>
+      </div>
+
+      <div class='header_online'>
+        Users online:
+        {{userOnline}}
+      </div>
+    </div>
+  {{/with}}
+</header>
+
+<div class='hero'>
+  {{#with hero}}
+    <h1 class='hero_title'>{{title}}</h1>
+    <p class='hero_text'>{{description}}</p>
+    <a
+      href='{{button.url}}'
+      class='button'
+    >{{button.text}}</a>
+  {{/with}}
+</div>
+
+<div class='about'>
+  {{#with about}}
+    <h3 class='about_title'>{{heading}}</h3>
+    <p class='about_text'>{{info}}</p>
+  {{/with}}
+</div>
+
+<div class='articles'>
+  <div class='articles_header'>
+    <h2 class='articles_title'>Our Articles</h2>
+    <a href='#' class='articles_button_all'>View All</a>
+  </div>
+  <div class='articles_cards'>
+    {{#each articles}}
+      <div class='card'>
+        <div class='card_img_block'>
+          <img
+            class='card_img'
+            src='{{photo}}'
+            alt='{{name}}'
+          />
+          {{#if isNew}}<div
+              class='card_new'
+            >new</div>{{/if}}
+        </div>
+        <strong class='card_title'>{{name}}</strong>
+        <p class='card_text'>{{description}}</p>
+        <div>
+          <a href='#' class='card_link'>Read All</a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+</div>
+
+{{#with footer}}
+  <footer class='footer'>
+    <div class='footer_pages'>
+      {{#each pages}}
+        <a href='{{path}}' class='footer_page'>{{name}}</a>
+      {{/each}}
+    </div>
+    <div class=''>
+      <span class='footer_copyright'>{{copyright}}</span>
+    </div>
+  </footer>
+{{/with}}
