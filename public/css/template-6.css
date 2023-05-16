@@ -185,7 +185,7 @@ html {
   color: var(--color-white);
   border-radius: var(--border-radius-s);
 
-  transition: opacity 0, 7;
+  transition: opacity 0.7;
 }
 
 .form_button:hover {
